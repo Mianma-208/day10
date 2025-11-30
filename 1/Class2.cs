@@ -8,9 +8,9 @@ namespace _Exam
 {
     internal class Exam
     {
-        string nameExam {  get; set; }
-        int grade { get; set; }
-        DateTime date { get; set; }
+        public string nameExam {  get; set; }
+        public int grade { get; set; }
+        public DateTime date { get; set; }
         public Exam(string nameExam, int grade, DateTime date)
         {
             this.nameExam = nameExam;
