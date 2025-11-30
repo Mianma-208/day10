@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1
+namespace _Person
 {
     internal class Person
     {
@@ -65,6 +65,5 @@ namespace _1
         {
             return $"Имя: {name}, фамилия: {surname}";
         }
-
     }
 }
