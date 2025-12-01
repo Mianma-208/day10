@@ -39,6 +39,7 @@ namespace _Person
             set
             {
                 if (value.Length < 1) throw new Exception("Неподходящая фамилия");
+                surname= value;
             }
         }
         public DateTime Date

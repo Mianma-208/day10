@@ -86,7 +86,7 @@ namespace _Student
             string str = "";
             foreach(Exam e in exams)
             {
-                str += e.ToString + "\n";
+                str += e.ToString() + "\n";
             }
             return $"Студент:{person}\nФорма обучения:{education}\nНомер группы:{numberGroup}\nСданные экзамены:\n{str}";
         }
