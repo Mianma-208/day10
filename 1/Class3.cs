@@ -55,6 +55,7 @@ namespace _Student
         {
             get
             {
+                if (exams.Length == 0) return 0;
                 int sum = 0;
                 for(int i=0;i<exams.Length;i++)
                 {
@@ -75,18 +76,21 @@ namespace _Student
             {
                 newMas[i] = exams[i];
             }
-            for (int i = exams.Length; i < ex.Length; i++)
+            for (int i = 0; i < ex.Length; i++)
             {
-                newMas[i] = ex[i];
+                newMas[i+exams.Length] = ex[i];
             }
             exams= newMas;
         }
         public override string ToString()
         {
             string str = "";
-            foreach(Exam e in exams)
+            if (exams != null)
             {
-                str += e.ToString() + "\n";
+                foreach (Exam e in exams)
+                {
+                    str += e.ToString() + "\n";
+                }
             }
             return $"Студент:{person}\nФорма обучения:{education}\nНомер группы:{numberGroup}\nСданные экзамены:\n{str}";
         }
